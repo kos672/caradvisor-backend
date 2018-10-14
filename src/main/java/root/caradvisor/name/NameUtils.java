@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 
@@ -46,10 +47,15 @@ public class NameUtils {
         } catch (IOException e) {
             log.error("File with specified path not found: %s", menNamesFilePath);
         }
-        if (menNames.contains(nameWithoutPolishCharacters)) {
+        if (menNames.stream().map(String::toLowerCase).collect(Collectors.toList()).contains
+                (nameWithoutPolishCharacters)) {
             recognizedGenderCharacter = Gender.MALE.getGenderSign();
-        } else if (femaleNames.contains(nameWithoutPolishCharacters)) {
+        } else if (femaleNames.stream().map(String::toLowerCase).collect(Collectors.toList()).contains
+                (nameWithoutPolishCharacters)) {
             recognizedGenderCharacter = Gender.FEMALE.getGenderSign();
+        }
+        if (recognizedGenderCharacter.equals("")) {
+            log.error("Impossible to recgonize name: {} to any gender", nameWithoutPolishCharacters);
         }
         return recognizedGenderCharacter;
     }

@@ -16,8 +16,8 @@ public class CountryUtils {
         } else if (reqPrefs.contains("tak") || reqPrefs.contains("mam")) {
             preferences = "y";
         }
-        if (preferences.equals("")) {
-            log.error("Impossible to recognize user's country preferences for given answer: %s", reqPrefs);
+        if (reqPrefs.equals("")) {
+            log.error("Impossible to recognize user's country preferences for given answer: {}", reqPrefs);
         }
         return preferences;
     }
@@ -31,7 +31,7 @@ public class CountryUtils {
             }
         }
         if (recognizedCountryCode.equals("")) {
-            log.error("Impossible to recgonize given country: %s", requestCountry);
+            log.error("Impossible to recgonize given country: {}", requestCountry);
         }
         return recognizedCountryCode;
     }

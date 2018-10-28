@@ -22,8 +22,9 @@ public class CountryPrefsController {
 
     @PostMapping(value = "/preferences", produces = "application/json")
     public ResponseEntity<String> checkPreferences(@RequestBody String preferences) {
-        String response = String.format("{\"preferences\": \"%s\"}", countryUtils.doesHavePreferences(preferences));
-        return !response.equals("") ? new ResponseEntity<>(response, HttpStatus.OK) : new ResponseEntity<>(response,
+        String recognizedPreferences = countryUtils.doesHavePreferences(preferences);
+        String response = String.format("{\"preferences\": \"%s\"}", recognizedPreferences);
+        return !recognizedPreferences.equals("") ? new ResponseEntity<>(response, HttpStatus.OK) : new ResponseEntity<>(
                 HttpStatus.NOT_FOUND);
     }
 

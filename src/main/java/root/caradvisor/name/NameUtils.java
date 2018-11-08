@@ -1,7 +1,9 @@
 package root.caradvisor.name;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import root.caradvisor.common.CommonUtils;
 import root.caradvisor.model.Gender;
 
 import java.io.BufferedReader;
@@ -18,20 +20,11 @@ import static java.util.Arrays.asList;
 @Slf4j
 public class NameUtils {
 
-    public String replacePolishCharacters(String name) {
-        return name.toLowerCase()
-                .replaceAll("ł", "l")
-                .replaceAll("ę", "e")
-                .replaceAll("ó", "o")
-                .replaceAll("ą", "a")
-                .replaceAll("ś", "s")
-                .replaceAll("ż", "z")
-                .replaceAll("ź", "z")
-                .replaceAll("ć", "c");
-    }
+    @Autowired
+    private CommonUtils commonUtils;
 
     public String recognizeGender(String name) {
-        String nameWithoutPolishCharacters = replacePolishCharacters(name);
+        String nameWithoutPolishCharacters = commonUtils.replacePolishCharacters(name);
         String menNamesFilePath = "src/main/resources/men_names.txt";
         String femaleNamesFilePath = "src/main/resources/female_names.txt";
         List<String> menNames = new ArrayList<>();

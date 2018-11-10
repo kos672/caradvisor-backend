@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class CommonUtils {
 
-    public String replacePolishCharacters(String name) {
-        return name.toLowerCase()
+    public String replacePolishCharacters(String message) {
+        return message.toLowerCase()
                 .replaceAll("ł", "l")
                 .replaceAll("ę", "e")
                 .replaceAll("ó", "o")

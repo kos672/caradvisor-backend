@@ -100,9 +100,9 @@ INSERT INTO car VALUES(null, 3, 1.2, 'Aveo', 5, (SELECT id_drivetrain FROM drive
 INSERT INTO car VALUES(null, 5, 1.4, 'Lacetti', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
 (SELECT id_engine FROM engine WHERE name='petrol'), (SELECT id_manufacturer FROM manufacturer WHERE name='Chevrolet'),
 (SELECT id_transmission FROM transmission WHERE name='manual'));
-INSERT INTO car VALUES(null, 5, 2.5, 'Trailblazer', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='RWD'),
+INSERT INTO car VALUES(null, 5, 2.5, 'Trailblazer', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='4WD'),
 (SELECT id_engine FROM engine WHERE name='diesel'), (SELECT id_manufacturer FROM manufacturer WHERE name='Chevrolet'),
-(SELECT id_transmission FROM transmission WHERE name='manual'));
+(SELECT id_transmission FROM transmission WHERE name='automatic'));
 
 INSERT INTO car VALUES(null, 4, 1.4, 'Accent', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
 (SELECT id_engine FROM engine WHERE name='petrol'), (SELECT id_manufacturer FROM manufacturer WHERE name='Hyundai'),
@@ -110,7 +110,7 @@ INSERT INTO car VALUES(null, 4, 1.4, 'Accent', 5, (SELECT id_drivetrain FROM dri
 INSERT INTO car VALUES(null, 4, 1.6, 'Elantra', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
 (SELECT id_engine FROM engine WHERE name='petrol'), (SELECT id_manufacturer FROM manufacturer WHERE name='Hyundai'),
 (SELECT id_transmission FROM transmission WHERE name='manual'));
-INSERT INTO car VALUES(null, 5, 2.9, 'Trailblazer', 6, (SELECT id_drivetrain FROM drivetrain WHERE name='4WD'),
+INSERT INTO car VALUES(null, 5, 2.4, 'Tucson', 6, (SELECT id_drivetrain FROM drivetrain WHERE name='4WD'),
 (SELECT id_engine FROM engine WHERE name='diesel'), (SELECT id_manufacturer FROM manufacturer WHERE name='Hyundai'),
 (SELECT id_transmission FROM transmission WHERE name='manual'));
 
@@ -157,7 +157,7 @@ INSERT INTO car VALUES(null, 5, 2.0, 'Q5', 5, (SELECT id_drivetrain FROM drivetr
 INSERT INTO car VALUES(null, 5, 1.0, 'C3', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
 (SELECT id_engine FROM engine WHERE name='petrol'), (SELECT id_manufacturer FROM manufacturer WHERE name='Citroen'),
 (SELECT id_transmission FROM transmission WHERE name='manual'));
-INSERT INTO car VALUES(null, 4, 1.6, 'C3', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
+INSERT INTO car VALUES(null, 4, 1.6, 'C5', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),
 (SELECT id_engine FROM engine WHERE name='petrol'), (SELECT id_manufacturer FROM manufacturer WHERE name='Citroen'),
 (SELECT id_transmission FROM transmission WHERE name='manual'));
 INSERT INTO car VALUES(null, 5, 2.0, 'C-Crossover', 5, (SELECT id_drivetrain FROM drivetrain WHERE name='FWD'),

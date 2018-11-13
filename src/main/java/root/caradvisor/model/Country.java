@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Entity
+@Entity(name = "country")
 @Table(name = "country")
 public class Country {
 

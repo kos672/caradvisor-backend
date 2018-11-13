@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Entity
+@Entity(name = "engine")
 @Table(name = "engine")
 public class Engine {
 

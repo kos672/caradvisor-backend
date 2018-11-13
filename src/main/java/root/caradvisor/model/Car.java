@@ -24,7 +24,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Entity
+@Entity(name = "car")
 @Table(name = "car")
 public class Car {
 

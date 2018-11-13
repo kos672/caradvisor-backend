@@ -16,21 +16,51 @@ INSERT INTO engine VALUES(null, 'petrol');
 INSERT INTO engine VALUES(null, 'diesel');
 
 # Manufacturer
-INSERT INTO manufacturer VALUES(null, 'Toyota');
-INSERT INTO manufacturer VALUES(null, 'Mazda');
-INSERT INTO manufacturer VALUES(null, 'Honda');
-INSERT INTO manufacturer VALUES(null, 'Mitsubishi');
-INSERT INTO manufacturer VALUES(null, 'Ford');
-INSERT INTO manufacturer VALUES(null, 'Chevrolet');
-INSERT INTO manufacturer VALUES(null, 'Hyundai');
-INSERT INTO manufacturer VALUES(null, 'Mercedes');
-INSERT INTO manufacturer VALUES(null, 'BMW');
-INSERT INTO manufacturer VALUES(null, 'Opel');
-INSERT INTO manufacturer VALUES(null, 'Audi');
-INSERT INTO manufacturer VALUES(null, 'Citroen');
-INSERT INTO manufacturer VALUES(null, 'Renault');
-INSERT INTO manufacturer VALUES(null, 'Peugot');
-INSERT INTO manufacturer VALUES(null, 'Skoda');
+INSERT INTO manufacturer VALUES (null, 'Toyota', (SELECT id_country
+                                                  FROM country
+                                                  WHERE name = 'JP'));
+INSERT INTO manufacturer VALUES (null, 'Mazda', (SELECT id_country
+                                                 FROM country
+                                                 WHERE name = 'JP'));
+INSERT INTO manufacturer VALUES (null, 'Honda', (SELECT id_country
+                                                 FROM country
+                                                 WHERE name = 'JP'));
+INSERT INTO manufacturer VALUES (null, 'Mitsubishi', (SELECT id_country
+                                                      FROM country
+                                                      WHERE name = 'JP'));
+INSERT INTO manufacturer VALUES (null, 'Ford', (SELECT id_country
+                                                FROM country
+                                                WHERE name = 'USA'));
+INSERT INTO manufacturer VALUES (null, 'Chevrolet', (SELECT id_country
+                                                     FROM country
+                                                     WHERE name = 'USA'));
+INSERT INTO manufacturer VALUES (null, 'Hyundai', (SELECT id_country
+                                                   FROM country
+                                                   WHERE name = 'KR'));
+INSERT INTO manufacturer VALUES (null, 'Mercedes', (SELECT id_country
+                                                    FROM country
+                                                    WHERE name = 'DE'));
+INSERT INTO manufacturer VALUES (null, 'BMW', (SELECT id_country
+                                               FROM country
+                                               WHERE name = 'DE'));
+INSERT INTO manufacturer VALUES (null, 'Opel', (SELECT id_country
+                                                FROM country
+                                                WHERE name = 'DE'));
+INSERT INTO manufacturer VALUES (null, 'Audi', (SELECT id_country
+                                                FROM country
+                                                WHERE name = 'DE'));
+INSERT INTO manufacturer VALUES (null, 'Citroen', (SELECT id_country
+                                                   FROM country
+                                                   WHERE name = 'FR'));
+INSERT INTO manufacturer VALUES (null, 'Renault', (SELECT id_country
+                                                   FROM country
+                                                   WHERE name = 'FR'));
+INSERT INTO manufacturer VALUES (null, 'Peugot', (SELECT id_country
+                                                  FROM country
+                                                  WHERE name = 'FR'));
+INSERT INTO manufacturer VALUES (null, 'Skoda', (SELECT id_country
+                                                 FROM country
+                                                 WHERE name = 'CZ'));
 
 # Transmission
 INSERT INTO transmission VALUES(null, 'manual');

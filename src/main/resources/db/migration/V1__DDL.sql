@@ -15,7 +15,8 @@ CREATE TABLE engine (
 
 CREATE TABLE manufacturer (
   id_manufacturer INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(255)
+  name            VARCHAR(255),
+  id_country      INT NOT NULL
 );
 
 CREATE TABLE transmission (
@@ -34,6 +35,10 @@ CREATE TABLE car (
   id_manufacturer INT,
   id_transmission INT
 );
+
+ALTER TABLE manufacturer
+  ADD CONSTRAINT FK_MANUFACTURER_COUNTRY FOREIGN KEY (id_country)
+REFERENCES country (id_country);
 
 ALTER TABLE car
   ADD CONSTRAINT FK_CAR_DRIVETRAIN FOREIGN KEY (id_drivetrain)

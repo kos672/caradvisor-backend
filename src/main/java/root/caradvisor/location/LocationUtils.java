@@ -9,16 +9,16 @@ public class LocationUtils {
 
     public String recognizeOftenDrivenLocation(String answerAboutLocation) {
         String answerAboutLocationLowerCase = answerAboutLocation.toLowerCase();
-        String oftenDrivenLocation = "";
+        String offroadIsOftenDrivenLocation = "";
         if (answerAboutLocationLowerCase.contains("nie")) {
-            oftenDrivenLocation = "city";
+            offroadIsOftenDrivenLocation = "n";
         } else if (answerAboutLocationLowerCase.contains("tak") || answerAboutLocationLowerCase.contains("często")) {
-            oftenDrivenLocation = "town";
+            offroadIsOftenDrivenLocation = "y";
         }
         if (answerAboutLocationLowerCase.equals("")) {
             log.error("Impossible to recognize if user has family for given answer: {}", answerAboutLocationLowerCase);
         }
-        return oftenDrivenLocation;
+        return offroadIsOftenDrivenLocation;
     }
 
 }

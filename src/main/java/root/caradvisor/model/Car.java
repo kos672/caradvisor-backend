@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -45,7 +46,7 @@ public class Car {
     private Engine engine;
 
     @Column(name = "engine_displacement", nullable = false)
-    private Double engineDisplacement;
+    private BigDecimal engineDisplacement;
 
     @ManyToOne
     @JoinColumn(name = "id_transmission", nullable = false)

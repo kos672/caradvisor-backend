@@ -21,7 +21,7 @@ public class CarSelection {
     private String family;
 
     @JsonProperty("offroadOftenDriven")
-    private String oftenOffroadDriving;
+    private String offroadOftenDriven;
 
     @JsonProperty("yearsOfDriving")
     private int yearsOfDriving;

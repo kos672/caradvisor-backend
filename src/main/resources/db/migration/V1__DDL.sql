@@ -30,6 +30,7 @@ CREATE TABLE car (
   engine_displacement FLOAT,
   model VARCHAR(255),
   seats INT,
+  image_path VARCHAR(255),
   id_drivetrain INT,
   id_engine INT,
   id_manufacturer INT,

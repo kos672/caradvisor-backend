@@ -20,6 +20,7 @@ public class CarDto {
     private String model;
     private String engine;
     private Double engineDisplacement;
+    private String imagePath;
     private String transmission;
     private String drivetrain;
     private Integer doors;

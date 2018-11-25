@@ -48,6 +48,9 @@ public class Car {
     @Column(name = "engine_displacement", nullable = false)
     private BigDecimal engineDisplacement;
 
+    @Column(name = "image_path")
+    private String imagePath;
+
     @ManyToOne
     @JoinColumn(name = "id_transmission", nullable = false)
     private Transmission transmission;

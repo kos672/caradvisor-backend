@@ -21,6 +21,7 @@ public class CarDto {
     private String engine;
     private Double engineDisplacement;
     private String imagePath;
+    private Double fuelConsumption;
     private String transmission;
     private String drivetrain;
     private Integer doors;

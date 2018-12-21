@@ -51,6 +51,9 @@ public class Car {
     @Column(name = "image_path")
     private String imagePath;
 
+    @Column(name = "fuel_consumption")
+    private BigDecimal fuelConsumption;
+
     @ManyToOne
     @JoinColumn(name = "id_transmission", nullable = false)
     private Transmission transmission;

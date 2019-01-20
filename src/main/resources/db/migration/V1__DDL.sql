@@ -38,6 +38,12 @@ CREATE TABLE car (
   id_transmission INT
 );
 
+CREATE TABLE user (
+  id_user INT PRIMARY KEY  AUTO_INCREMENT,
+  username VARCHAR(255),
+  password VARCHAR(255)
+);
+
 ALTER TABLE manufacturer
   ADD CONSTRAINT FK_MANUFACTURER_COUNTRY FOREIGN KEY (id_country)
 REFERENCES country (id_country);
